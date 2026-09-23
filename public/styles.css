@@ -1,0 +1,301 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, "Microsoft YaHei", system-ui, sans-serif;
+  color: #202124;
+  background: #f6f7f9;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  border: 1px solid #d8dde6;
+  background: #fff;
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+button:hover {
+  border-color: #9aa7b8;
+}
+
+.busy button {
+  pointer-events: none;
+  opacity: .62;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 320px 1fr 340px;
+  min-height: 100vh;
+}
+
+.side,
+.style-panel {
+  background: #fff;
+  border-right: 1px solid #e5e7eb;
+  padding: 20px;
+}
+
+.style-panel {
+  border-right: 0;
+  border-left: 1px solid #e5e7eb;
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.brand p {
+  margin: 6px 0 18px;
+  color: #697386;
+  font-size: 13px;
+}
+
+.create-form,
+.style-form {
+  display: grid;
+  gap: 10px;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  border: 1px solid #d8dde6;
+  border-radius: 6px;
+  padding: 9px 10px;
+  background: #fff;
+}
+
+textarea {
+  min-height: 92px;
+  resize: vertical;
+}
+
+.session-list {
+  display: grid;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.session-item {
+  display: grid;
+  gap: 5px;
+  text-align: left;
+  position: relative;
+}
+
+.session-item.active {
+  border-color: #d64045;
+  box-shadow: 0 0 0 2px rgba(214, 64, 69, .12);
+}
+
+.session-title {
+  font-weight: 700;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.session-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.session-delete {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  margin-left: auto;
+  border-radius: 999px;
+  color: #697386;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.session-delete:hover {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.session-url {
+  color: #697386;
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.session-platform {
+  color: #4b5563;
+  font-size: 12px;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  border-radius: 999px;
+  background: #eef2ff;
+  color: #3445a7;
+  padding: 3px 9px;
+  font-size: 12px;
+}
+
+.pill.warn {
+  background: #fff2cc;
+  color: #8a5a00;
+}
+
+.main {
+  padding: 24px;
+  min-width: 0;
+}
+
+.profile-head,
+.toolbar,
+.style-bar,
+.chat,
+.composer,
+.events,
+.empty {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 14px;
+}
+
+.profile-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.profile-head h2 {
+  margin: 0 0 6px;
+}
+
+.profile-head a {
+  color: #697386;
+  font-size: 13px;
+  word-break: break-all;
+}
+
+.toolbar,
+.style-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.style-bar select {
+  max-width: 220px;
+}
+
+.chat {
+  min-height: 360px;
+  max-height: 56vh;
+  overflow: auto;
+}
+
+.message {
+  max-width: 760px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 11px 13px;
+  margin-bottom: 10px;
+  background: #fafafa;
+}
+
+.message.user {
+  margin-left: auto;
+  background: #f0fdf4;
+}
+
+.message.self {
+  margin-left: auto;
+  background: #f0fdf4;
+}
+
+.message.ai_suggestion {
+  background: #fff7ed;
+  border-color: #fed7aa;
+}
+
+.message-meta {
+  color: #697386;
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+.message p {
+  margin: 0;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+.composer {
+  display: grid;
+  grid-template-columns: 1fr 96px;
+  gap: 10px;
+}
+
+.composer textarea {
+  min-height: 110px;
+}
+
+.notice {
+  border: 1px solid #fed7aa;
+  background: #fff7ed;
+  color: #8a4b12;
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+
+.events h3,
+.style-panel h2 {
+  margin-top: 0;
+}
+
+.events p {
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+  border-top: 1px solid #eef0f3;
+  margin: 0;
+  padding: 9px 0;
+  color: #4b5563;
+  font-size: 13px;
+}
+
+.style-form label {
+  display: grid;
+  gap: 5px;
+  color: #4b5563;
+  font-size: 13px;
+}
+
+.style-actions {
+  display: flex;
+  gap: 10px;
+  margin: 0 0 18px;
+}

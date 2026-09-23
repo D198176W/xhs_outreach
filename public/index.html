@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>建联工作台</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <div id="app" class="app">
+      <aside class="side">
+        <div class="brand">
+          <h1>建联工作台</h1>
+          <p>小红书 / LinkedIn · CDP 直连浏览器 · AI 建议 · 人工可控</p>
+        </div>
+        <form id="createSession" class="create-form">
+          <input id="profileUrl" placeholder="粘贴小红书或 LinkedIn 主页 URL">
+          <button type="submit">创建会话</button>
+        </form>
+        <div id="sessionList" class="session-list"></div>
+      </aside>
+      <main id="detail" class="main"></main>
+      <aside class="style-panel">
+        <h2>聊天风格</h2>
+        <div class="style-actions">
+          <select id="styleSelect"></select>
+          <button id="applyStyle">应用</button>
+        </div>
+        <form id="styleForm" class="style-form">
+          <label>名称<input id="styleName" placeholder="例如：轻松自然"></label>
+          <label>语气<input id="styleTone" placeholder="礼貌、自然、简短"></label>
+          <label>身份<input id="styleIdentity" placeholder="DigClaw 团队成员"></label>
+          <label>目标<input id="styleGoal" placeholder="邀请进一步沟通"></label>
+          <label>长度<input id="styleLength" placeholder="80 到 120 字"></label>
+          <label>避免事项<textarea id="styleAvoid" placeholder="不要夸张承诺，不要冒充熟人"></textarea></label>
+          <label>额外要求<textarea id="styleExtra" placeholder="可选"></textarea></label>
+          <button type="submit">保存新风格</button>
+        </form>
+      </aside>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
